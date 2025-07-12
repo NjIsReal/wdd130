@@ -10,6 +10,10 @@ main img {
   display: block;
 }
 
+h1 {
+  text-align: center;
+}
+
 aside {
   width: 300px;
   margin: 20px auto;
