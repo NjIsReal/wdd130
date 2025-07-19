@@ -1,0 +1,230 @@
+:root {
+    --primary-color: #505033; /* Dark Browns (And who says brown is ugly?) */
+    --secondary-color: #264969; /* Inition Dye (Aye looks fiiinnneee)*/
+    --accent1-color: #CFCFB4; /* Light Beige/Tan (Very fitting)*/
+    --accent2-color: #B4CDE4; /* Columbia Blue (Sexy colour) */
+
+    --heading-font: 'Georgia', serif;
+    --text-font: 'Roboto', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--accent1-color); /* Light Beige/Tan  White is boring*/
+    font-family: var(--text-font);
+    color: var(--primary-color); 
+    line-height: 1.6; 
+}
+
+
+header, main, footer {
+    width: 840px; 
+    margin: 0 auto; 
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 10px; 
+}
+
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+
+header {
+    display: flex; 
+    justify-content: space-between; /* Now this helps puts space between logo and nav */
+    align-items: center; 
+    padding: 20px;
+    background-color: var(--secondary-color); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+header img {
+    width: 80px; /* Adjust logo size CRUCIAL */
+    height: auto;
+    border-radius: 50%; /* Make logo rounded like my head if desired */
+}
+
+header nav a {
+    text-decoration: none; /* Remove underline from nav links */
+    color: var(--accent2-color); /* Colour for navigation links */
+    padding: 10px 15px;
+    transition: background-color 0.3s ease; /* Sexy Smooth transition on hover */
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Hero Section Styling - VERY Crucial for overlay effect */
+.hero {
+    position: relative; /* Parent for absolute positioning of h1 and article */
+    margin-bottom: 30px; /* Space below the hero section */
+}
+
+.hero img { /* The main background image of the hero section */
+    display: block;
+    width: 100%; /* Image fills the entire width of its container */
+    height: auto; 
+    object-fit: cover; 
+    max-height: 600px; /* Limit height for aesthetic purposes cause I'm corny */
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px; 
+    width: 100%; 
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color); 
+    color: var(--primary-color); 
+    font-size: 2.5em; 
+}
+
+.hero article { 
+    position: absolute; 
+    top: 150px; 
+    right: 80px; 
+    width: 90%; 
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 25px;
+    border-radius: 10px; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); 
+    text-align: left;
+    line-height: 1.7;
+}
+
+.hero article img { 
+    float: right; 
+    width: 125px; 
+    height: auto;
+    margin-left: 20px; 
+    margin-bottom: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
+}
+
+.history-section {
+    padding: 30px 16px; 
+    background-color: var(--accent2-color); 
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+
+.history-content {
+    display: flex; 
+    gap: 30px; 
+    padding: 0 20px;
+}
+
+.history-content p {
+    flex: 1; 
+    margin: 0; 
+    padding: 0; 
+    text-align: justify; 
+}
+
+.adventure-section {
+    padding: 30px 16px;
+    margin-bottom: 30px;
+}
+
+.adventure-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2em;
+    color: var(--secondary-color);
+}
+
+.adventure-images {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 20px; 
+    padding: 0 20px;
+}
+
+.adventure-images figure {
+    margin: 0; 
+    text-align: center;
+}
+
+.adventure-images img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.adventure-images img:hover {
+    transform: scale(1.05); 
+}
+
+.adventure-images figcaption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--secondary-color); 
+    color: var(--accent2-color); 
+    border-top: 1px solid var(--accent1-color); 
+}
+
+footer p {
+    margin: 0;
+    padding: 0; 
+    font-size: 0.9em;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 15px;
+}
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.1);
+}
+/* Not gonna lie this was a pain to do but fun but mostly painful */
