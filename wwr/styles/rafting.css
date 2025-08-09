@@ -80,7 +80,7 @@ header nav a:hover {
     color: #fff;
 }
 
-/* Hero Section Styling - VERY Crucial for overlay effect */
+/* Hero Section Styling - VERY Crucial for overlay effect (from about.html) */
 .hero {
     position: relative; /* Parent for absolute positioning of h1 and article */
     margin-bottom: 30px; /* Space below the hero section */
@@ -130,7 +130,7 @@ header nav a:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
 }
 
-/* History Section Styles */
+/* History Section Styles (from about.html) */
 .history-section {
     padding: 30px 16px; 
     background-color: var(--accent2-color); 
@@ -158,7 +158,7 @@ header nav a:hover {
     text-align: justify; 
 }
 
-/* Adventure Awaits You Section Styles */
+/* Adventure Awaits You Section Styles (from about.html) */
 .adventure-section {
     padding: 30px 16px;
     margin-bottom: 30px;
@@ -203,6 +203,9 @@ header nav a:hover {
     font-style: italic;
 }
 
+/* --- W05 Contact Us Page Specific Styles --- */
+
+/* General Section Styling for Contact Page */
 .contact-info-map,
 .employee-profiles,
 .contact-form-section {
@@ -221,13 +224,15 @@ header nav a:hover {
     color: var(--secondary-color);
 }
 
+/* NEW CSS RULE FOR "FIND US HERE" HEADING */
 h2.find-us {
-    text-align: left;
-    margin-left: 50px; 
+    text-align: left; /* Aligns the heading to the left */
+    margin-left: 10px; /* Adjusts the left margin for slight movement */
     padding: 10px;
     color: var(--primary-color);
 }
 
+/* Contact Info and Map Grid */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -294,6 +299,7 @@ h2.find-us {
     transform: translateY(-5px);
 }
 
+/* *** FIX FOR EMPLOYEE IMAGE SIZE *** */
 .employee-grid img {
     width: 150px; 
     height: 150px; 
@@ -310,6 +316,7 @@ h2.find-us {
     color: var(--primary-color);
 }
 
+/* Contact Form Styles */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -391,6 +398,307 @@ fieldset label {
     transform: translateY(-2px);
 }
 
+/* --- W06 Home Page Specific Styles --- */
+#hero {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden; /* Ensures image does not overflow on resize */
+}
+
+#hero-box {
+    width: 100%;
+    height: 100%; /* Important to make the box fill the hero area */
+}
+
+#hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block; /* Removes extra space below image */
+}
+
+#hero-msg {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    text-align: center;
+    color: #fff; /* White text for contrast on dark image */
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.home-title {
+    font-size: 3em;
+    color: #fff; /* White title text */
+    margin-bottom: 20px;
+}
+
+.button-box {
+    margin-top: 20px;
+}
+
+.book {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* Allows padding and transitions */
+}
+
+.book:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    padding: 30px 16px;
+    margin-bottom: 30px;
+    background-color: var(--accent2-color);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.newsletter-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form label {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid var(--accent1-color);
+    border-radius: 5px;
+    font-family: var(--text-font);
+    font-size: 1em;
+}
+
+.newsletter-form button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.newsletter-form button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Home Grid Content Section */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for content */
+    gap: 25px;
+    padding: 30px 20px;
+    background-color: #fff; /* White background for the grid area */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.grid-item {
+    text-align: center;
+    background-color: var(--accent1-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item img {
+    width: 100%; /* Images fill their grid item */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.grid-item h3 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    text-align: center;
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- W06 Trips Page Specific Styles --- */
+.hero.trips-hero h1 { /* Override specific h1 for trips hero */
+    font-size: 2.8em;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for trips hero text */
+}
+
+/* Call to action for trips page */
+.contact-cta {
+    text-align: center;
+    padding: 40px 16px;
+    background-color: var(--primary-color);
+    color: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.contact-cta h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+/* Trip Descriptions Section */
+.trip-descriptions {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column on small screens */
+    gap: 40px;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.trip-card {
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column layout for card content */
+    gap: 20px;
+    background-color: var(--accent1-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.trip-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustment for trip cards */
+@media (min-width: 768px) {
+    .trip-descriptions {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Two columns on larger screens */
+    }
+    .trip-card {
+        grid-template-columns: 1fr; /* Keep content within card stacked for larger cards */
+    }
+}
+
+
+/* Trips Table Section */
+.trips-table-section {
+    padding: 30px 16px;
+    margin-bottom: 30px;
+    background-color: var(--accent2-color);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.trips-table-section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 2em; /* Ensure consistent heading size */
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: separate; /* Changed to separate to allow border-spacing and border-radius */
+    border-spacing: 0; /* Remove space between cells */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px; /* Apply rounded corners to the table */
+    overflow: hidden; /* Ensures rounded corners apply cleanly */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.trips-table th,
+.trips-table td {
+    border: 1px solid var(--accent1-color); /* Slightly more visible border */
+    padding: 15px 20px; /* Increased padding for better spacing */
+    text-align: left;
+}
+
+.trips-table th {
+    background-color: var(--secondary-color);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.95em; /* Slightly larger font for headers */
+    letter-spacing: 0.05em; /* Add some letter spacing for headers */
+}
+
+.trips-table tbody tr:nth-child(even) {
+    background-color: #f0f0f0; /* Lighter zebra striping */
+}
+
+.trips-table tbody tr:hover {
+    background-color: var(--accent1-color); /* Highlight row on hover with accent color */
+    transform: scale(1.01); /* Subtle zoom effect on hover */
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Ensure first/last cells have rounded corners where appropriate */
+.trips-table thead tr:first-child th:first-child {
+    border-top-left-radius: 8px;
+}
+.trips-table thead tr:first-child th:last-child {
+    border-top-right-radius: 8px;
+}
+.trips-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 8px;
+}
+.trips-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 8px;
+}
+
 /* Footer Specific Styles */
 footer {
     display: flex; 
@@ -428,4 +736,77 @@ footer p {
     transform: scale(1.1);
 }
 
-/* Not gonna lie this was a pain to do but fun but mostly painful */
+/* Footer link for wireframe (specific to trips.html example) */
+footer a {
+    color: var(--accent2-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    header, main, footer {
+        width: 100%; /* Full width on smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    header {
+        grid-template-columns: 1fr; /* Stack logo and nav vertically */
+        justify-items: center; /* Center items */
+    }
+
+    header nav {
+        justify-content: center; /* Center nav links */
+        margin-top: 10px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Stack info and map vertically */
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr; /* Stack grid items vertically */
+    }
+
+    .trips-table {
+        display: block;
+        overflow-x: auto; /* Adds horizontal scroll if table is too wide */
+        white-space: nowrap; /* Prevents cell content from wrapping */
+    }
+
+    .trips-table thead, .trips-table tbody, .trips-table th, .trips-table td, .trips-table tr {
+        display: block; /* Make table elements act as blocks for stacking */
+    }
+
+    .trips-table th {
+        text-align: right; /* Align headers to right when stacked */
+        padding: 10px 15px;
+        background-color: var(--secondary-color); /* Maintain header background */
+        color: #fff;
+    }
+
+    .trips-table td {
+        border: none; /* Remove individual cell borders when stacked */
+        border-bottom: 1px solid var(--accent1-color); /* Add bottom border for separation */
+        position: relative;
+        padding-left: 50%; /* Make space for the pseudo-element label */
+        text-align: left;
+    }
+
+    .trips-table td:before {
+        content: attr(data-label); /* Use data-label for pseudo-element */
+        position: absolute;
+        left: 0;
+        width: 45%; /* Space for the label */
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: right;
+        color: var(--secondary-color);
+    }
+    /* Add data-label attributes to your HTML <td> tags for this to work effectively */
+    /* Example: <td data-label="Duration">4 Hours</td> */
+}
